@@ -106,8 +106,8 @@ html.w-editor [text-split] {opacity: 1;}
 let lenis;
 if (Webflow.env("editor") === undefined) {
   lenis = new Lenis({
-    lerp: 0.04,
-    wheelMultiplier: 0.8,
+    lerp: 1,
+    wheelMultiplier: 0.7,
     gestureOrientation: "vertical",
     normalizeWheel: false,
     smoothTouch: false
