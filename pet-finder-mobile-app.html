@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. https://www.webflow.com -->
+<!-- Last Published: Wed May 29 2024 20:55:31 GMT+0000 (Coordinated Universal Time) -->
+<html data-wf-domain="uxdany.webflow.io" data-wf-page="660e08f7275f52c8991e0605" data-wf-site="65e6215b1368bfb39dd4d538" data-wf-status="1">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Pet Finder Mobile App</title>
+        <meta content="Aplicación móvil para rastrear la ubicación de tu mascota." name="description"/>
+        <meta content="Pet Finder Mobile App" property="og:title"/>
+        <meta content="Aplicación móvil para rastrear la ubicación de tu mascota." property="og:description"/>
+        <meta content="Pet Finder Mobile App" property="twitter:title"/>
+        <meta content="Aplicación móvil para rastrear la ubicación de tu mascota." property="twitter:description"/>
+        <meta property="og:type" content="website"/>
+        <meta content="summary_large_image" name="twitter:card"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="Webflow" name="generator"/>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript">
+            !function(o, c) {
+                var n = c.documentElement
+                  , t = " w-mod-";
+                n.className += t + "js",
+                ("ontouchstart"in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+            }(window, document);
+        </script>
+        <link href="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/65e6219961c60babe983056c_Favicon%20(1).png" rel="shortcut icon" type="image/x-icon"/>
+        <link href="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/65e6219fb1e5bfe453e61587_Logo-D%20(1).png" rel="apple-touch-icon"/>
+        <style>
+            html.lenis {
+                height: auto;
+            }
+
+            .lenis.lenis-smooth {
+                scroll-behavior: auto;
+            }
+
+            .lenis.lenis-smooth [data-lenis-prevent] {
+                overscroll-behavior: contain;
+            }
+
+            .lenis.lenis-stopped {
+                overflow: hidden;
+            }
+        </style>
+        <style>
+            [text-split] {
+                opacity: 0;
+            }
+
+            html.w-editor [text-split] {
+                opacity: 1;
+            }
+
+            .word {
+                overflow: hidden;
+                transform-origin: bottom;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="mobile-nav">
+            <div class="w-layout-vflex nav__principal mobile">
+                <a href="/" class="nav-btn inactive w-button">Home</a>
+                <a href="/set-winner-mobile-app" class="nav-btn inactive w-button">Next project</a>
+            </div>
+        </nav>
+        <nav class="nav _10px">
+            <div class="nav-cont">
+                <a href="/" class="logo-btn w-inline-block">
+                    <svg class="logo-dany" viewBox="0 0 64 16" fill="currentColor">
+                        <path d="M0 16V0H5.32036C10.5926 0 13.9389 3.52 13.9389 8C13.9389 12.8 10.5926 16 5.32036 16H0ZM2.5037 13.8514H5.10369C8.97961 13.8514 11.3629 11.7029 11.3629 8C11.3629 4.45714 8.97961 2.14857 5.10369 2.14857H2.5037V13.8514Z"></path>
+                        <path d="M14.7453 16L20.1138 0H24.8564L30.2249 16H27.649L26.4694 12.4571H18.4768L17.2972 16H14.7453ZM19.199 10.24H25.7472L22.4731 0.365715L19.199 10.24Z"></path>
+                        <path d="M32.6786 16V0H37.4693L43.9693 15.6343V0H46.4008V16H41.5378L35.1341 0.365715V16H32.6786Z"></path>
+                        <path d="M55.3093 16V9.69143H54.226L49.1223 0H51.7945L56.5852 9.32571L61.2315 0H64L58.8482 9.69143H57.813V16H55.3093Z"></path>
+                    </svg>
+                </a>
+                <div class="w-layout-vflex nav__principal">
+                    <a href="/" class="nav-btn inactive w-button">Home</a>
+                    <a href="/set-winner-mobile-app" class="nav-btn inactive w-button">Next project</a>
+                </div>
+                <a href="mailto:uxdanydesign@gmail.com" class="nav-btn contact w-button">Let &#x27;s talk</a>
+            </div>
+        </nav>
+        <main class="main">
+            <header class="section">
+                <div id="hero" class="container hero--studies">
+                    <div class="case-study__hero-img">
+                        <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513694af64f091a89b0b1c_Petfinder-case-study-cover.webp" loading="lazy" sizes="(max-width: 767px) 93vw, (max-width: 991px) 54vw, 39vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513694af64f091a89b0b1c_Petfinder-case-study-cover-p-500.webp 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513694af64f091a89b0b1c_Petfinder-case-study-cover-p-800.webp 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513694af64f091a89b0b1c_Petfinder-case-study-cover-p-1080.webp 1080w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513694af64f091a89b0b1c_Petfinder-case-study-cover-p-1600.webp 1600w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513694af64f091a89b0b1c_Petfinder-case-study-cover.webp 1656w" alt="Petfinder Case Study Cover." class="case-study-hero__img"/>
+                    </div>
+                    <div class="case-study__hero-header">
+                        <div class="w-layout-vflex case-study-hero__name">
+                            <h1 class="h1__case-study petfinder">Petfinder</h1>
+                            <div class="subhead">App Design</div>
+                        </div>
+                        <div class="case-study-hero__info">
+                            <h2 class="h2 normal">Find your pet no matter where and how far away it is.</h2>
+                            <div class="body-small">Pet owners go through unimaginable worries when their pet is lost. The goal was to reduce that fear with a transparent and informative app.</div>
+                        </div>
+                        <div class="case-study-hero__tags">
+                            <div class="case-study-hero__areas">
+                                <div class="subhead bold">Areas</div>
+                                <div class="subhead">Research, Ideation, Visual Design, UI,UX.</div>
+                            </div>
+                            <div class="case-study-hero__duration">
+                                <div class="subhead bold">Duration</div>
+                                <div class="subhead">4 weeks</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <header class="section">
+                <div class="container case-study-structure">
+                    <div class="w-layout-vflex case-study__section-cont">
+                        <h2 class="h2 with-shadow">Highlights</h2>
+                        <div class="case-study__content">
+                            <div class="case-study__highlights goal">
+                                <div class="subhead high__goal">Goal</div>
+                                <div class="caset-study__highlights-body goal">Develop an efficient tool for tracking and locating pets, that provides a positive and comforting experience for both owners and pets.</div>
+                            </div>
+                            <div class="w-layout-vflex case-study__multiple-cont">
+                                <div class="case-study__highlights problem">
+                                    <div class="subhead high__problem">User problem</div>
+                                    <div class="caset-study__highlights-body problem">The research found that products, both physical and digital, are not very intuitive, which generates problems of use with users with disabilities.</div>
+                                </div>
+                                <div class="case-study__highlights problem">
+                                    <div class="subhead high__problem">User problem</div>
+                                    <div class="caset-study__highlights-body problem">The size and weight of the physical products are not adaptable for all types of pets, making it difficult for small pets to use them.</div>
+                                </div>
+                            </div>
+                            <div class="case-study__highlights challenge">
+                                <div class="subhead high__challenge">Main challenge</div>
+                                <div class="caset-study__highlights-body challenge">How might we design a product that is accessible and easy to handle for users with physical and visual disabilities.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <header class="section">
+                <div class="container case-study-structure">
+                    <div class="w-layout-vflex case-study__section-cont">
+                        <div class="w-layout-vflex case-study__section-header">
+                            <h2 class="h2 with-shadow">Knowing the problems</h2>
+                            <div class="body-small">
+                                To find the problems and needs of the users, <strong>desk research</strong>
+                                was conducted <strong>followed by user interviews</strong>
+                                , this data was converted into an <strong>empathy map</strong>
+                                which was then translated into a <strong>table of &quot;needs &quot;and &quot;actions &quot;</strong>
+                                . At the end, a<strong>persona and a user journey map</strong>
+                                were created.
+                            </div>
+                        </div>
+                        <div class="case-study__content">
+                            <div class="w-layout-vflex case-study__multiple-cont">
+                                <div class="case-study__img-text">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513a0eb17c0a6bb24af185_Petfinder-Empathy-Map.webp" loading="lazy" sizes="(max-width: 767px) 93vw, (max-width: 991px) 92vw, 67vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513a0eb17c0a6bb24af185_Petfinder-Empathy-Map-p-500.webp 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513a0eb17c0a6bb24af185_Petfinder-Empathy-Map-p-800.webp 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513a0eb17c0a6bb24af185_Petfinder-Empathy-Map-p-1080.webp 1080w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513a0eb17c0a6bb24af185_Petfinder-Empathy-Map-p-1600.webp 1600w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513a0eb17c0a6bb24af185_Petfinder-Empathy-Map.webp 1730w" alt="PetFinder Empathy Map."/>
+                                    <div class="w-layout-vflex case-study__note-div">
+                                        <div class="text-note">The empathy map was made to synthesize everything documented by the users.</div>
+                                    </div>
+                                </div>
+                                <div class="case-study__img-text">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513a0edc5523424cb8eb6b_Petfinder-Needs-and-actions.webp" loading="lazy" sizes="(max-width: 767px) 93vw, (max-width: 991px) 92vw, 67vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513a0edc5523424cb8eb6b_Petfinder-Needs-and-actions-p-500.webp 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513a0edc5523424cb8eb6b_Petfinder-Needs-and-actions-p-800.webp 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513a0edc5523424cb8eb6b_Petfinder-Needs-and-actions-p-1080.webp 1080w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513a0edc5523424cb8eb6b_Petfinder-Needs-and-actions-p-1600.webp 1600w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513a0edc5523424cb8eb6b_Petfinder-Needs-and-actions.webp 1730w" alt="PetFinder table of &quot;actions&quot; and &quot;needs&quot;."/>
+                                    <div class="w-layout-vflex case-study__note-div">
+                                        <div class="text-note">A &quot;Needs &quot;and &quot;Actions &quot;table was created to understand these behaviors in depth.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-layout-vflex case-study__multiple-cont">
+                                <div class="case-study__img-text">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513e3fe5a2eb38fe0b0b72_Petfinder-User-Persona.webp" loading="lazy" sizes="(max-width: 767px) 93vw, (max-width: 991px) 92vw, 67vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513e3fe5a2eb38fe0b0b72_Petfinder-User-Persona-p-500.webp 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513e3fe5a2eb38fe0b0b72_Petfinder-User-Persona-p-800.webp 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513e3fe5a2eb38fe0b0b72_Petfinder-User-Persona-p-1080.webp 1080w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513e3fe5a2eb38fe0b0b72_Petfinder-User-Persona-p-1600.webp 1600w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513e3fe5a2eb38fe0b0b72_Petfinder-User-Persona.webp 1730w" alt="PetFinder User Persona."/>
+                                    <div class="w-layout-vflex case-study__note-div">
+                                        <div class="text-note">The user &#x27;s profile was captured in a persona.</div>
+                                    </div>
+                                </div>
+                                <div class="case-study__img-text">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513e3f1d43c5ab7010c87f_Petfinder-User-Journey.webp" loading="lazy" sizes="(max-width: 767px) 93vw, (max-width: 991px) 92vw, 67vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513e3f1d43c5ab7010c87f_Petfinder-User-Journey-p-500.webp 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513e3f1d43c5ab7010c87f_Petfinder-User-Journey-p-800.webp 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513e3f1d43c5ab7010c87f_Petfinder-User-Journey-p-1080.webp 1080w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513e3f1d43c5ab7010c87f_Petfinder-User-Journey-p-1600.webp 1600w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66513e3f1d43c5ab7010c87f_Petfinder-User-Journey.webp 1730w" alt="PetFinder User Journey."/>
+                                    <div class="w-layout-vflex case-study__note-div">
+                                        <div class="text-note">A user journey was created to understand the different touchpoints and opportunities for improvement.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="case-study__cont-div">
+                                <div class="w-layout-vflex final-insights">
+                                    <div class="subhead tertiary">Final insights...</div>
+                                    <div class="general-text__1-5em">At the end of this phase, some insights were gained on what the app experience should be like.</div>
+                                </div>
+                                <div class="_3-colum-grid">
+                                    <div class="w-layout-vflex inisghts-div">
+                                        <div class="subhead bold">Accesible</div>
+                                        <div class="body-small">Many users have pets for help or companionship, so designing for them is important.</div>
+                                    </div>
+                                    <div class="w-layout-vflex inisghts-div">
+                                        <div class="subhead bold">Informative</div>
+                                        <div class="body-small">Always keep in mind to report the pet &#x27;s condition over other things that may be visually appealing.</div>
+                                    </div>
+                                    <div class="w-layout-vflex inisghts-div">
+                                        <div class="subhead bold">Intuitive</div>
+                                        <div class="body-small">Many users may be distant from technology, so the design has to be intuitive.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <header class="section">
+                <div class="container case-study-structure">
+                    <div class="w-layout-vflex case-study__section-cont">
+                        <div class="w-layout-vflex case-study__section-header">
+                            <h2 class="h2 with-shadow">Generating ideas.</h2>
+                            <div class="body-small">
+                                After understanding the problems, a<strong>Problem Statement was drawn up and ideas were generated to solve the problem.</strong>
+                            </div>
+                        </div>
+                        <div class="case-study__content">
+                            <div class="case-study__general-cont">
+                                <div id="w-node-_7b15fbf9-cad9-1198-0a05-8aa2427042fd-991e0605" class="w-layout-vflex final-insights">
+                                    <div class="subhead bold">Problem statement</div>
+                                    <div class="body-small center">Alicia is a 34 year old lawyer who has lost one of her pets in the past and is looking for an effective and simple way to keep an eye on her pet. This way she can feel safe and calm when she is not at her pet &#x27;s side.</div>
+                                </div>
+                            </div>
+                            <div class="case-study__cont-img">
+                                <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652287d0a4ce729128ba25d_Petfinder%20Tabla%20de%20prioridades.png" loading="lazy" sizes="(max-width: 479px) 88vw, (max-width: 767px) 86vw, (max-width: 991px) 89vw, 64vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652287d0a4ce729128ba25d_Petfinder%20Tabla%20de%20prioridades-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652287d0a4ce729128ba25d_Petfinder%20Tabla%20de%20prioridades-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652287d0a4ce729128ba25d_Petfinder%20Tabla%20de%20prioridades-p-1080.png 1080w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652287d0a4ce729128ba25d_Petfinder%20Tabla%20de%20prioridades.png 1431w" alt="Petfinder Prioritization Table." class="case-study__img-alone"/>
+                            </div>
+                            <div class="case-study__text-img-cont all-padding">
+                                <div class="div__text-img">
+                                    <div class="subhead tertiary">Priority Matrix</div>
+                                    <div class="general-text__1-5em left">The criteria was based on project time, designing only the ideas that could make the cut.</div>
+                                </div>
+                                <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652287d3b22c81721e27f63_Petfinder%20Priorizaci%C3%B3n%20de%20ideas.png" loading="lazy" sizes="(max-width: 479px) 88vw, (max-width: 767px) 86vw, (max-width: 991px) 42vw, 31vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652287d3b22c81721e27f63_Petfinder%20Priorizaci%C3%B3n%20de%20ideas-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652287d3b22c81721e27f63_Petfinder%20Priorizaci%C3%B3n%20de%20ideas-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652287d3b22c81721e27f63_Petfinder%20Priorizaci%C3%B3n%20de%20ideas-p-1080.png 1080w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652287d3b22c81721e27f63_Petfinder%20Priorizaci%C3%B3n%20de%20ideas.png 1271w" alt="Petfinder Priority Matrix." class="user-journey-img"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <header class="section">
+                <div class="container case-study-structure">
+                    <div class="w-layout-vflex case-study__section-cont">
+                        <div class="w-layout-vflex case-study__section-header">
+                            <h2 class="h2 with-shadow">An accessible structure.</h2>
+                            <div class="body-small">After deciding which ideas would be designed, organizing the content so that the user could have a good understanding of it was crucial.</div>
+                        </div>
+                        <div class="case-study__content">
+                            <div class="case-study__text-img-cont center">
+                                <div class="div__text-img center">
+                                    <div class="subhead tertiary">Task flows</div>
+                                    <div class="general-text__1-5em">Creation of Task Flows for the main user actions.</div>
+                                </div>
+                                <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66522a47246cf1eb29878c0a_Petfinder%20Task%20Flows.png" loading="lazy" sizes="(max-width: 479px) 88vw, (max-width: 767px) 86vw, (max-width: 991px) 89vw, 64vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66522a47246cf1eb29878c0a_Petfinder%20Task%20Flows-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66522a47246cf1eb29878c0a_Petfinder%20Task%20Flows-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66522a47246cf1eb29878c0a_Petfinder%20Task%20Flows-p-1080.png 1080w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66522a47246cf1eb29878c0a_Petfinder%20Task%20Flows-p-1600.png 1600w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66522a47246cf1eb29878c0a_Petfinder%20Task%20Flows-p-2000.png 2000w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66522a47246cf1eb29878c0a_Petfinder%20Task%20Flows.png 2580w" alt="Petfinder Task Flows." class="case-study__img-alone"/>
+                            </div>
+                            <div class="case-study__text-img-cont center">
+                                <div class="div__text-img center">
+                                    <div class="subhead tertiary">Sitemap</div>
+                                    <div class="general-text__1-5em">The development of a Sitemap served to organize the content of the app.</div>
+                                </div>
+                                <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66522a4774d2c3ff7685a063_Petfinder%20Sitemap.png" loading="lazy" sizes="(max-width: 479px) 88vw, (max-width: 767px) 86vw, (max-width: 991px) 89vw, 64vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66522a4774d2c3ff7685a063_Petfinder%20Sitemap-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66522a4774d2c3ff7685a063_Petfinder%20Sitemap-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66522a4774d2c3ff7685a063_Petfinder%20Sitemap-p-1080.png 1080w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66522a4774d2c3ff7685a063_Petfinder%20Sitemap-p-1600.png 1600w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66522a4774d2c3ff7685a063_Petfinder%20Sitemap-p-2000.png 2000w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66522a4774d2c3ff7685a063_Petfinder%20Sitemap-p-2600.png 2600w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66522a4774d2c3ff7685a063_Petfinder%20Sitemap.png 2744w" alt="Petfinder Sitemap." class="case-study__img-alone"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <header class="section">
+                <div class="container visual-example">
+                    <div class="w-layout-vflex case-study__section-cont center">
+                        <div class="text-visual-example">Your pet &#x27;s safety in just a few clicks</div>
+                        <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66523429246a92fe33285a73_Petfinder%20Visual%20Example.png" loading="lazy" sizes="(max-width: 479px) 75vw, (max-width: 767px) 56vw, (max-width: 991px) 37vw, 27vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66523429246a92fe33285a73_Petfinder%20Visual%20Example-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66523429246a92fe33285a73_Petfinder%20Visual%20Example-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/66523429246a92fe33285a73_Petfinder%20Visual%20Example.png 804w" alt="Petfinder Visual Example." class="visaul-example"/>
+                    </div>
+                </div>
+            </header>
+            <header class="section">
+                <div class="container case-study-structure">
+                    <div class="w-layout-vflex case-study__section-cont">
+                        <div class="w-layout-vflex case-study__section-header">
+                            <h2 class="h2 with-shadow">Main features</h2>
+                            <div class="body-small">
+                                With the help of user and market research, I <strong>added some important features</strong>
+                                to the application <strong>to make it more effective</strong>
+                                , have <strong>higher conversion</strong>
+                                and <strong>user satisfaction</strong>
+                                .
+                            </div>
+                        </div>
+                        <div class="case-study__content">
+                            <div class="case-study__cont-img off-padding">
+                                <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422fa452244394238c0f_Petfinder%20Visual%20Features%20One.png" loading="lazy" sizes="(max-width: 767px) 93vw, (max-width: 991px) 92vw, 67vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422fa452244394238c0f_Petfinder%20Visual%20Features%20One-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422fa452244394238c0f_Petfinder%20Visual%20Features%20One-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422fa452244394238c0f_Petfinder%20Visual%20Features%20One-p-1080.png 1080w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422fa452244394238c0f_Petfinder%20Visual%20Features%20One-p-1600.png 1600w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422fa452244394238c0f_Petfinder%20Visual%20Features%20One.png 1920w" alt="Petfinder Main Features one." class="case-study__img-alone"/>
+                            </div>
+                            <div class="case-study__cont-img off-padding">
+                                <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422f40575a7c3a684ef1_Petfinder%20Visual%20Features%20Two.png" loading="lazy" sizes="(max-width: 767px) 93vw, (max-width: 991px) 92vw, 67vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422f40575a7c3a684ef1_Petfinder%20Visual%20Features%20Two-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422f40575a7c3a684ef1_Petfinder%20Visual%20Features%20Two-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422f40575a7c3a684ef1_Petfinder%20Visual%20Features%20Two-p-1080.png 1080w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422f40575a7c3a684ef1_Petfinder%20Visual%20Features%20Two-p-1600.png 1600w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422f40575a7c3a684ef1_Petfinder%20Visual%20Features%20Two.png 1920w" alt="Petfinder Main Features two." class="case-study__img-alone"/>
+                            </div>
+                            <div class="case-study__cont-img off-padding">
+                                <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422fa040ac5cf426bd95_Petfinder%20Visual%20Features%20Three.png" loading="lazy" sizes="(max-width: 767px) 93vw, (max-width: 991px) 92vw, 67vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422fa040ac5cf426bd95_Petfinder%20Visual%20Features%20Three-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422fa040ac5cf426bd95_Petfinder%20Visual%20Features%20Three-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422fa040ac5cf426bd95_Petfinder%20Visual%20Features%20Three-p-1080.png 1080w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422fa040ac5cf426bd95_Petfinder%20Visual%20Features%20Three-p-1600.png 1600w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652422fa040ac5cf426bd95_Petfinder%20Visual%20Features%20Three.png 1920w" alt="Petfinder Main Features three." class="case-study__img-alone"/>
+                            </div>
+                            <div class="w-layout-vflex case-study__multiple-cont">
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427dda11694f77dbaa48_Create%20an%20account%20-%20Name.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427dda11694f77dbaa48_Create%20an%20account%20-%20Name-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427dda11694f77dbaa48_Create%20an%20account%20-%20Name-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427dda11694f77dbaa48_Create%20an%20account%20-%20Name.png 860w" alt="Petfinder Create an Account Name" class="case-study__img-alone"/>
+                                </div>
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427d040b677d691faeb5_Create%20an%20account%20-%20Password.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427d040b677d691faeb5_Create%20an%20account%20-%20Password-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427d040b677d691faeb5_Create%20an%20account%20-%20Password-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427d040b677d691faeb5_Create%20an%20account%20-%20Password.png 860w" alt="Petfinder Create Account Password" class="case-study__img-alone"/>
+                                </div>
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427d51ced042b5f28262_Secure%20fence-%202.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427d51ced042b5f28262_Secure%20fence-%202-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427d51ced042b5f28262_Secure%20fence-%202-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427d51ced042b5f28262_Secure%20fence-%202.png 860w" alt="Petfinder Secure Fence" class="case-study__img-alone"/>
+                                </div>
+                            </div>
+                            <div class="w-layout-vflex case-study__multiple-cont">
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427cd9753cb81c255fc4_Edit%20pet%20info%20-%205.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427cd9753cb81c255fc4_Edit%20pet%20info%20-%205-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427cd9753cb81c255fc4_Edit%20pet%20info%20-%205-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427cd9753cb81c255fc4_Edit%20pet%20info%20-%205.png 860w" alt="Petfinder Select Your Pet" class="case-study__img-alone"/>
+                                </div>
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427ded5fbf213a65aff9_Home%20-%20Location%20(1).png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427ded5fbf213a65aff9_Home%20-%20Location%20(1)-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427ded5fbf213a65aff9_Home%20-%20Location%20(1)-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427ded5fbf213a65aff9_Home%20-%20Location%20(1).png 860w" alt="Petfinder Home" class="case-study__img-alone"/>
+                                </div>
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427df0c4b53c5f421760_Home%20-%20Pet%20Info%20(1).png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427df0c4b53c5f421760_Home%20-%20Pet%20Info%20(1)-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427df0c4b53c5f421760_Home%20-%20Pet%20Info%20(1)-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427df0c4b53c5f421760_Home%20-%20Pet%20Info%20(1).png 860w" alt="Petfinder Edit Pet Profile" class="case-study__img-alone"/>
+                                </div>
+                            </div>
+                            <div class="w-layout-vflex case-study__multiple-cont">
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427d46dd317bdadec669_Home%20-%20Location%20(2).png" loading="lazy" alt="Petfinder Change Pet" class="case-study__img-alone"/>
+                                </div>
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c51ced042b5f28211_Home%20-%20Exact%20Location.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c51ced042b5f28211_Home%20-%20Exact%20Location-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c51ced042b5f28211_Home%20-%20Exact%20Location-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c51ced042b5f28211_Home%20-%20Exact%20Location.png 860w" alt="Petfinder Exact Location" class="case-study__img-alone"/>
+                                </div>
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c1c67158c10ca9a49_Home%20-%20Exact%20Location%20-%20With%20route.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c1c67158c10ca9a49_Home%20-%20Exact%20Location%20-%20With%20route-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c1c67158c10ca9a49_Home%20-%20Exact%20Location%20-%20With%20route-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c1c67158c10ca9a49_Home%20-%20Exact%20Location%20-%20With%20route.png 860w" alt="Petfinder Exact Location With Route" class="case-study__img-alone"/>
+                                </div>
+                            </div>
+                            <div class="w-layout-vflex case-study__multiple-cont">
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c4bfa3750e86db445_Activity%20-%20Present%20Day%20(1).png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c4bfa3750e86db445_Activity%20-%20Present%20Day%20(1)-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c4bfa3750e86db445_Activity%20-%20Present%20Day%20(1)-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c4bfa3750e86db445_Activity%20-%20Present%20Day%20(1).png 860w" alt="Petfinder Activity Present Day" class="case-study__img-alone"/>
+                                </div>
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c80b405e3e3e736b4_Activity%20-%20Past%20Day.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c80b405e3e3e736b4_Activity%20-%20Past%20Day-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c80b405e3e3e736b4_Activity%20-%20Past%20Day-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c80b405e3e3e736b4_Activity%20-%20Past%20Day.png 860w" alt="Petfinder Activity Past Day" class="case-study__img-alone"/>
+                                </div>
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427cf18796f25c8f0d38_Activity%20-%20Next%20Day.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427cf18796f25c8f0d38_Activity%20-%20Next%20Day-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427cf18796f25c8f0d38_Activity%20-%20Next%20Day-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427cf18796f25c8f0d38_Activity%20-%20Next%20Day.png 860w" alt="Petfinder Activity Next Day" class="case-study__img-alone"/>
+                                </div>
+                            </div>
+                            <div class="w-layout-vflex case-study__multiple-cont">
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c045ece8c29433e85_Activity%20-%20Set%20goal.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c045ece8c29433e85_Activity%20-%20Set%20goal-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c045ece8c29433e85_Activity%20-%20Set%20goal-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c045ece8c29433e85_Activity%20-%20Set%20goal.png 860w" alt="Petfinder Set Activity Goal" class="case-study__img-alone"/>
+                                </div>
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c1c67158c10ca9a36_Notifications.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c1c67158c10ca9a36_Notifications-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c1c67158c10ca9a36_Notifications-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c1c67158c10ca9a36_Notifications.png 860w" alt="Petfinder Motifications" class="case-study__img-alone"/>
+                                </div>
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c246a92fe3331ff43_Global%20notification.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c246a92fe3331ff43_Global%20notification-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c246a92fe3331ff43_Global%20notification-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427c246a92fe3331ff43_Global%20notification.png 860w" alt="Petfinder Global Notification" class="case-study__img-alone"/>
+                                </div>
+                            </div>
+                            <div class="w-layout-vflex case-study__multiple-cont">
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427e17cb57347908eef4_Settings%20(2).png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427e17cb57347908eef4_Settings%20(2)-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427e17cb57347908eef4_Settings%20(2)-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427e17cb57347908eef4_Settings%20(2).png 860w" alt="Petfinder Gnereal Settings" class="case-study__img-alone"/>
+                                </div>
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427ced5fbf213a65af81_Settings.png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427ced5fbf213a65af81_Settings-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427ced5fbf213a65af81_Settings-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427ced5fbf213a65af81_Settings.png 860w" alt="Petfinder Reset Password" class="case-study__img-alone"/>
+                                </div>
+                                <div class="case-study__cont-img _1em">
+                                    <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427bc0fd0e2c16599aea_Settings%20(1).png" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 88vw, (max-width: 991px) 89vw, 65vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427bc0fd0e2c16599aea_Settings%20(1)-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427bc0fd0e2c16599aea_Settings%20(1)-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6652427bc0fd0e2c16599aea_Settings%20(1).png 860w" alt="Petfinder Settings" class="case-study__img-alone"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <header class="section">
+                <div class="container case-study-structure">
+                    <div class="w-layout-vflex case-study__section-cont">
+                        <div class="w-layout-vflex case-study__section-header">
+                            <h2 class="h2 with-shadow">Results</h2>
+                            <div class="body-small">Usability tests and surveys were conducted to see how users interact with the product and their opinion of it.</div>
+                        </div>
+                        <div class="case-study__content">
+                            <div class="w-layout-vflex case-study__metrics-cont">
+                                <div class="case-study__metrics">
+                                    <div class="w-layout-vflex case-study__metrics-box">
+                                        <div id="metrics-success" class="text-metrics__case-study">82.5</div>
+                                        <div class="text-metrics__case-study">%</div>
+                                    </div>
+                                    <h3 class="h3 tertiary metrics">SUS</h3>
+                                </div>
+                                <div class="case-study__metrics">
+                                    <h3 class="h3 tertiary metrics">CSS</h3>
+                                    <div class="w-layout-vflex case-study__metrics-box">
+                                        <div id="metrics-nps" class="text-metrics__case-study">80</div>
+                                        <div class="text-metrics__case-study">%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <header class="section">
+                <div class="container case-study-structure next-project">
+                    <div class="w-layout-vflex case-study__section-cont">
+                        <div class="w-layout-vflex case-study__section-header">
+                            <h2 class="h2 with-shadow">Other projects</h2>
+                        </div>
+                        <a href="/pamesa-website" class="case-study w-inline-block">
+                            <img src="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6601cdf452baba7bb90db81d_Pamesa%20landing%20cover.png" loading="lazy" sizes="(max-width: 767px) 86vw, (max-width: 991px) 88vw, 67vw" srcset="https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6601cdf452baba7bb90db81d_Pamesa%20landing%20cover-p-500.png 500w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6601cdf452baba7bb90db81d_Pamesa%20landing%20cover-p-800.png 800w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6601cdf452baba7bb90db81d_Pamesa%20landing%20cover-p-1080.png 1080w, https://assets-global.website-files.com/65e6215b1368bfb39dd4d538/6601cdf452baba7bb90db81d_Pamesa%20landing%20cover.png 1240w" alt="Pamesa case study cover." class="case-study__img"/>
+                            <div class="case-study__info">
+                                <div class="case-study__tags">
+                                    <div class="subhead case-study-home">Web Design</div>
+                                    <svg class="svg-star" viewBox="0 0 12 12" fill="currentColor">
+                                        <path class="path-2" d="M9.62719 5.46396L7.36011 4.63989L6.53604 2.37281C6.49542 2.26338 6.42229 2.16901 6.32647 2.10236C6.23064 2.03572 6.11672 2 6 2C5.88328 2 5.76936 2.03572 5.67353 2.10236C5.57771 2.16901 5.50458 2.26338 5.46396 2.37281L4.63989 4.63989L2.37281 5.46396C2.26338 5.50458 2.16901 5.57771 2.10236 5.67353C2.03572 5.76936 2 5.88328 2 6C2 6.11672 2.03572 6.23064 2.10236 6.32647C2.16901 6.42229 2.26338 6.49542 2.37281 6.53604L4.63989 7.36047L5.46396 9.62719C5.50458 9.73662 5.57771 9.83099 5.67353 9.89764C5.76936 9.96428 5.88328 10 6 10C6.11672 10 6.23064 9.96428 6.32647 9.89764C6.42229 9.83099 6.49542 9.73662 6.53604 9.62719L7.36047 7.36011L9.62719 6.53604C9.73662 6.49542 9.83099 6.42229 9.89764 6.32647C9.96428 6.23064 10 6.11672 10 6C10 5.88328 9.96428 5.76936 9.89764 5.67353C9.83099 5.57771 9.73662 5.50458 9.62719 5.46396ZM7.0392 6.86838C6.99999 6.88266 6.96437 6.90535 6.93486 6.93486C6.90535 6.96437 6.88266 6.99999 6.86838 7.0392L6 9.42707L5.13162 7.0392C5.11734 6.99999 5.09465 6.96437 5.06514 6.93486C5.03563 6.90535 5.00001 6.88266 4.9608 6.86838L2.57293 6L4.9608 5.13162C5.00001 5.11734 5.03563 5.09465 5.06514 5.06514C5.09465 5.03563 5.11734 5.00001 5.13162 4.9608L6 2.57293L6.86838 4.9608C6.88266 5.00001 6.90535 5.03563 6.93486 5.06514C6.96437 5.09465 6.99999 5.11734 7.0392 5.13162L9.42707 6L7.0392 6.86838Z"></path>
+                                    </svg>
+                                    <div class="subhead case-study-home">Conceptual</div>
+                                </div>
+                                <div class="case-study__title horizontal">
+                                    <h2 class="h2 home-50">A professional and serious design for a professional and serious brand.</h2>
+                                    <div class="case-study-btn">Explore case study</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <footer class="section">
+                <div class="container is--footer">
+                    <div class="footer-heading">
+                        <div class="footer-info-wrap">
+                            <h2 class="h2 center">Ready to work together?</h2>
+                            <div class="body-normal footer">Let &#x27;s have a chat to discuss the next product your audience will love.</div>
+                        </div>
+                        <a href="mailto:uxdanydesign@gmail.com" class="btn-main__footer w-button">uxdanydesign@gmail.com</a>
+                    </div>
+                    <div class="footer-btns-wrap">
+                        <a href="#hero" class="btn-back-to-top w-button">Back to top</a>
+                        <a href="https://www.instagram.com/uxdany/" target="_blank" class="btn-social w-button">Instagram</a>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=65e6215b1368bfb39dd4d538" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="main.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
+        <script>
+
+            // DISABLE SCROLL ON FULL MENU
+            // Captura el elemento del menú móvil
+            const navMobileMenu = document.querySelector('.nav-mobile-menu');
+
+            // Función para desactivar el scroll
+            function disableScroll() {
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Función para activar el scroll
+            function enableScroll() {
+                document.body.style.overflow = '';
+            }
+
+            // Observador de cambios en el estilo del menú móvil
+            const observer = new MutationObserver(mutationsList=>{
+                for (let mutation of mutationsList) {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+                        // Si el menú móvil está visible, desactiva el scroll
+                        if (navMobileMenu.style.display === 'flex') {
+                            disableScroll();
+                        } else {
+                            // Si no, activa el scroll
+                            enableScroll();
+                        }
+                    }
+                }
+            }
+            );
+
+            // Observa cambios en el estilo del menú móvil
+            observer.observe(navMobileMenu, {
+                attributes: true
+            });
+
+            // LENIS SMOOTH SCROLL
+            let lenis;
+            if (Webflow.env("editor") === undefined) {
+                lenis = new Lenis({
+                    lerp: 0.04,
+                    wheelMultiplier: 0.8,
+                    gestureOrientation: "vertical",
+                    normalizeWheel: false,
+                    smoothTouch: false
+                });
+                function raf(time) {
+                    lenis.raf(time);
+                    requestAnimationFrame(raf);
+                }
+                requestAnimationFrame(raf);
+            }
+            $("[data-lenis-start]").on("click", function() {
+                lenis.start();
+            });
+            $("[data-lenis-stop]").on("click", function() {
+                lenis.stop();
+            });
+            $("[data-lenis-toggle]").on("click", function() {
+                $(this).toggleClass("stop-scroll");
+                if ($(this).hasClass("stop-scroll")) {
+                    lenis.stop();
+                } else {
+                    lenis.start();
+                }
+            });
+
+            //Reset scroll top
+
+            history.scrollRestoration = "manual";
+
+            $(window).on('pageHide', function() {
+                $(window).scrollTop(0);
+            });
+        </script>
+        <script src="https://unpkg.com/split-type"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.3.2/countUp.umd.min.js" integrity="sha512-Be9XaN4NvN8CVmbk4juf7JX2/87a7I37CX1WV37w+jyav4exBHDqHzmjs+Tbx7Dt2j9vpULDZNxcP0sZP03/WQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+
+            window.addEventListener("DOMContentLoaded", (event)=>{
+                // Split text into spans
+                let typeSplit = new SplitType("[text-split]",{
+                    types: "words, chars",
+                    tagName: "span"
+                });
+
+                // Link timelines to scroll position
+                function createScrollTrigger(triggerElement, timeline) {
+                    // Reset tl when scroll out of view past bottom of screen
+                    ScrollTrigger.create({
+                        trigger: triggerElement,
+                        start: "top bottom",
+                        onLeaveBack: ()=>{
+                            timeline.progress(0);
+                            timeline.pause();
+                        }
+                    });
+                    // Play tl when scrolled into view (60% from top of screen)
+                    ScrollTrigger.create({
+                        trigger: triggerElement,
+                        start: "top 60%",
+                        onEnter: ()=>timeline.play()
+                    });
+                }
+
+                $("[letters-slide-up]").each(function(index) {
+                    let tl = gsap.timeline({
+                        paused: true
+                    });
+                    tl.from($(this).find(".char"), {
+                        delay: 0.1,
+                        opacity: 0,
+                        yPercent: 60,
+                        duration: 0.5,
+                        ease: "in.sine",
+                        stagger: {
+                            amount: 0.6
+                        }
+                    });
+                    createScrollTrigger($(this), tl);
+                });
+
+                $("[letters-slide-down]").each(function(index) {
+                    let tl = gsap.timeline({
+                        paused: true
+                    });
+                    tl.from($(this).find(".char"), {
+                        yPercent: -120,
+                        duration: 0.3,
+                        ease: "power1.out",
+                        stagger: {
+                            amount: 0.7
+                        }
+                    });
+                    createScrollTrigger($(this), tl);
+                });
+
+                $("[letters-fade-in]").each(function(index) {
+                    let tl = gsap.timeline({
+                        paused: true
+                    });
+                    tl.from($(this).find(".char"), {
+                        delay: 0.8,
+                        opacity: 0,
+                        duration: 0.6,
+                        ease: "in.out.sine",
+                        stagger: {
+                            amount: 0.8
+                        }
+                    });
+                    createScrollTrigger($(this), tl);
+                });
+
+                $("[letters-fade-in-random]").each(function(index) {
+                    let tl = gsap.timeline({
+                        paused: true
+                    });
+                    tl.from($(this).find(".char"), {
+                        opacity: 0,
+                        duration: 0.05,
+                        ease: "power1.out",
+                        stagger: {
+                            amount: 0.4,
+                            from: "random"
+                        }
+                    });
+                    createScrollTrigger($(this), tl);
+                });
+
+                $("[scrub-each-word]").each(function(index) {
+                    let tl = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: $(this),
+                            start: "top 90%",
+                            end: "top center",
+                            scrub: true
+                        }
+                    });
+                    tl.from($(this).find(".char"), {
+                        opacity: 0.2,
+                        duration: 3,
+                        ease: "sine",
+                        stagger: {
+                            each: 0.4
+                        }
+                    });
+                });
+
+                // Avoid flash of unstyled content
+                gsap.set("[text-split]", {
+                    opacity: 1
+                });
+            }
+            );
+        </script>
+    </body>
+</html>
