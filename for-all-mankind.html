@@ -507,47 +507,7 @@
       requestAnimationFrame(raf);
     </script>
 
-    <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const transitionTrigger = document.querySelector('.transition-trigger');
-  const transitionElement = document.querySelector('.transition');
-
-  if (!transitionTrigger || !transitionElement) return;
-
-  // Seleccionamos TODOS los enlaces 'a'
-  const links = document.querySelectorAll('a');
-
-  links.forEach(link => {
-    link.addEventListener('click', function(e) {
-      const destination = this.getAttribute('href');
-      
-      // FILTROS: Solo aplicar si el enlace...
-      // 1. Tiene un href válido
-      // 2. No es un link externo (mismo hostname)
-      // 3. No es una sección interna (#inicio, etc)
-      // 4. No abre en una pestaña nueva (_blank)
-      if (
-        destination && 
-        destination.indexOf('#') === -1 && 
-        this.hostname === window.location.hostname &&
-        this.target !== "_blank"
-      ) {
-        
-        e.preventDefault();
-
-        // Ejecutamos la animación de Webflow
-        transitionElement.style.display = 'block';
-        transitionTrigger.click();
-
-        // Esperamos el tiempo de la animación antes de cambiar de página
-        setTimeout(() => {
-          window.location.href = destination;
-        }, 800); // Ajusta a 800ms para que coincida con tu exitDurationMS
-      }
-    });
-  });
-});
-</script>
+    
 
     <style>
   .w-webflow-badge {
@@ -556,5 +516,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
    </style>
 </body>
+
 
 </html>
