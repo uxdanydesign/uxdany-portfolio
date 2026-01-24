@@ -455,6 +455,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+    <script>
+        const transitionLayer = document.querySelector('.transition');
+transitionLayer.style.display = 'block'; // Asegurar que sea visible
+setTimeout(() => {
+    transitionLayer.style.opacity = '1';
+}, 10);
+    </script>
+
    <style>
   .w-webflow-badge {
     display: none !important;
@@ -462,5 +470,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
    </style>
 </body>
+
 
 </html>
