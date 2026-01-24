@@ -423,37 +423,7 @@
       requestAnimationFrame(raf);
     </script>
 
-    <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const transitionTrigger = document.querySelector('.transition-trigger');
-  const transitionElement = document.querySelector('.transition');
-
-  // Seleccionamos todos los enlaces de proyectos
-  const links = document.querySelectorAll('a.case-study-double-container');
-
-  links.forEach(link => {
-    link.addEventListener('click', function(e) {
-      // 1. Evitamos que cambie de página instantáneamente
-      e.preventDefault();
-      const destination = this.getAttribute('href');
-
-      // 2. Ejecutamos la animación (hacemos aparecer el div de transición)
-      // Nota: Aquí usamos GSAP si lo tienes, o simplemente CSS.
-      // Suponiendo que tu clase .transition está configurada para cubrir la pantalla:
-      transitionElement.style.display = 'block';
-      transitionElement.style.opacity = '1';
-      
-      // Si usas una interacción de Webflow, aquí disparamos el click al trigger
-      transitionTrigger.click();
-
-      // 3. Esperamos 600ms (lo que tarda el fundido) y cambiamos de página
-      setTimeout(() => {
-        window.location.href = destination;
-      }, 600); 
-    });
-  });
-});
-</script>
+    
 
    <style>
   .w-webflow-badge {
@@ -462,5 +432,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
    </style>
 </body>
+
 
 </html>
